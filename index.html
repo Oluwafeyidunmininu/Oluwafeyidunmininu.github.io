@@ -52,25 +52,20 @@
       text-align: center;
       margin-bottom: 2rem;
     }
-    header img {
-      max-width: 300px;
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(30, 144, 255, 0.3);
-      margin-bottom: 1.5rem;
-    }
     header h1 {
       font-size: 2.8rem;
       margin-bottom: 0.25rem;
       font-weight: 700;
       color: #1e90ff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
-    header p.summary {
+    header p.title {
       font-size: 1.2rem;
       color: #495057;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.5;
+      font-weight: 600;
+      margin-top: 0.25rem;
+      text-transform: capitalize;
     }
 
     /* Projects Grid */
@@ -95,7 +90,9 @@
     .project-image {
       width: 100%;
       height: 160px;
-      object-fit: cover;
+      object-fit: contain;
+      padding: 1rem;
+      background: #f0f8ff;
     }
     .project-content {
       padding: 1rem 1.2rem;
@@ -118,10 +115,18 @@
       font-size: 0.95rem;
       margin-bottom: 0.8rem;
     }
+    .project-tools img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
     .project-tools {
       font-weight: 600;
       color: #1e90ff;
       font-size: 0.9rem;
+      display: flex;
+      align-items: center;
     }
 
     /* Footer */
@@ -146,7 +151,7 @@
       header h1 {
         font-size: 2rem;
       }
-      header p.summary {
+      header p.title {
         font-size: 1rem;
       }
     }
@@ -161,11 +166,8 @@
   <div class="container">
 
     <header>
-      <img src="https://avatars.githubusercontent.com/u/182537964?v=4" alt="Emmanuel Dunmininu Olugbade" />
-      <h1>| Excel | SQL | Power BI | Python</h1>
-      <p class="summary">
-        I am a data analyst specializing in turning raw data into actionable insights through Excel, SQL, Power BI, and Python. My passion is to create meaningful dashboards and analyses that help organizations make smart decisions.
-      </p>
+      <h1>Emmanuel Dunmininu Olugbade</h1>
+      <p class="title">Data Analyst</p>
     </header>
 
     <section class="projects">
@@ -181,12 +183,16 @@
           <p class="project-desc">
             Analyzed sustainable job opportunities and inflation resistance in Nigeria to recommend resilient skills for economic growth.
           </p>
-          <p class="project-tools">Tools: Excel, SQL, Power BI</p>
+          <p class="project-tools">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Excel icon" title="Excel" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3291/3291698.png" alt="SQL icon" title="SQL" />
+            <img src="https://cdn-icons-png.flaticon.com/512/888/888870.png" alt="Power BI icon" title="Power BI" />
+          </p>
         </div>
       </article>
 
       <article class="project-card">
-        <img class="project-image" src="https://raw.githubusercontent.com/Oluwafeyidunmininu/COVID-19-ANALYSIS-REVIEW/main/covid19_chart.png" alt="COVID-19 Analysis" onerror="this.style.display='none'" />
+        <img class="project-image" src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="COVID-19 virus icon" />
         <div class="project-content">
           <h3 class="project-title">
             <a href="https://github.com/Oluwafeyidunmininu/COVID-19-ANALYSIS-REVIEW" target="_blank" rel="noopener noreferrer">
@@ -196,12 +202,14 @@
           <p class="project-desc">
             Tracked key health indicators including infection rates and vaccination coverage to guide public health planning.
           </p>
-          <p class="project-tools">Tools: SQL</p>
+          <p class="project-tools">
+            <img src="https://cdn-icons-png.flaticon.com/512/3291/3291698.png" alt="SQL icon" title="SQL" />
+          </p>
         </div>
       </article>
 
       <article class="project-card">
-        <img class="project-image" src="https://raw.githubusercontent.com/Oluwafeyidunmininu/Altera-HR-Analysis/main/altera_dashboard.png" alt="Altera HR Analysis" onerror="this.style.display='none'" />
+        <img class="project-image" src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="HR icon" />
         <div class="project-content">
           <h3 class="project-title">
             <a href="https://github.com/Oluwafeyidunmininu/Altera-HR-Analysis" target="_blank" rel="noopener noreferrer">
@@ -211,12 +219,15 @@
           <p class="project-desc">
             Built dashboards to monitor HR KPIs and performance metrics for workforce optimization at Altera.
           </p>
-          <p class="project-tools">Tools: Power BI, Excel</p>
+          <p class="project-tools">
+            <img src="https://cdn-icons-png.flaticon.com/512/888/888870.png" alt="Power BI icon" title="Power BI" />
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Excel icon" title="Excel" />
+          </p>
         </div>
       </article>
 
       <article class="project-card">
-        <img class="project-image" src="https://raw.githubusercontent.com/Oluwafeyidunmininu/CUSTOMER-AND-ORDERS-PROJECT/main/customer_order_chart.png" alt="Customer and Orders Project" onerror="this.style.display='none'" />
+        <img class="project-image" src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Customer icon" />
         <div class="project-content">
           <h3 class="project-title">
             <a href="https://github.com/Oluwafeyidunmininu/CUSTOMER-AND-ORDERS-PROJECT" target="_blank" rel="noopener noreferrer">
@@ -226,7 +237,9 @@
           <p class="project-desc">
             Used SQL to derive customer insights and sales analysis for KCC order data.
           </p>
-          <p class="project-tools">Tools: SQL</p>
+          <p class="project-tools">
+            <img src="https://cdn-icons-png.flaticon.com/512/3291/3291698.png" alt="SQL icon" title="SQL" />
+          </p>
         </div>
       </article>
 
@@ -235,8 +248,7 @@
 
   <footer>
     <p>
-      Contact me: <a href="mailto:dunmininue@gmail.com">dunmininue@gmail.com</a> | 
-      <a href="https://linkedin.com/in/emmanuel-olugbade-dunmininu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      Contact me: <a href="mailto:dunmininue@gmail.com">dunmininue@gmail.com</a> | GitHub: <a href="https://github.com/Oluwafeyidunmininu" target="_blank" rel="noopener noreferrer">Oluwafeyidunmininu</a>
     </p>
   </footer>
 
