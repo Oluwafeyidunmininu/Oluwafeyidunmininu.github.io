@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EMMANUEL DUNMININU OLUGBADE | Data Analyst Portfolio</title>
+  <title>EMMANUEL DUNMININU OLUGBADE | Portfolio</title>
 
   <style>
     /* Reset */
@@ -32,12 +32,41 @@
       padding: 1rem 2rem;
       color: white;
       font-weight: 700;
-      font-size: 1.5rem;
-      letter-spacing: 1.1px;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      text-align: center;
+    }
+    nav .name {
+      font-size: 2.2rem;
+      letter-spacing: 1.2px;
+      line-height: 1.1;
+    }
+    nav .title {
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.7px;
+      margin-top: 0.15rem;
+      opacity: 0.85;
+    }
+
+    /* Contact bar below navbar */
+    .contact-bar {
+      background-color: #e9ecef;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      font-size: 0.95rem;
+      color: #495057;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .contact-bar a {
+      color: #1e90ff;
+      font-weight: 600;
+      margin: 0 0.6rem;
+    }
+    .contact-bar a:hover {
+      text-decoration: underline;
     }
 
     /* Container */
@@ -47,25 +76,9 @@
       padding: 0 1rem;
     }
 
-    /* Header Section */
+    /* Hide header */
     header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.25rem;
-      font-weight: 700;
-      color: #1e90ff;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-    header p.title {
-      font-size: 1.2rem;
-      color: #495057;
-      font-weight: 600;
-      margin-top: 0.25rem;
-      text-transform: capitalize;
+      display: none;
     }
 
     /* Projects Grid */
@@ -115,19 +128,6 @@
       font-size: 0.95rem;
       margin-bottom: 0.8rem;
     }
-    .project-tools img {
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-    .project-tools {
-      font-weight: 600;
-      color: #1e90ff;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-    }
 
     /* Footer */
     footer {
@@ -148,11 +148,14 @@
 
     /* Responsive tweaks */
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
+      nav .name {
+        font-size: 1.6rem;
       }
-      header p.title {
-        font-size: 1rem;
+      nav .title {
+        font-size: 0.8rem;
+      }
+      .contact-bar {
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -160,15 +163,16 @@
 <body>
 
   <nav>
-    EMMANUEL DUNMININU OLUGBADE
+    <div class="name">EMMANUEL DUNMININU OLUGBADE</div>
+    <div class="title">Data Analyst</div>
   </nav>
 
-  <div class="container">
+  <div class="contact-bar">
+    Email: <a href="mailto:dunmininue@gmail.com">dunmininue@gmail.com</a> |
+    LinkedIn: <a href="https://linkedin.com/in/emmanuel-olugbade-dunmininu" target="_blank" rel="noopener noreferrer">emmanuel-olugbade-dunmininu</a>
+  </div>
 
-    <header>
-      <h1>Emmanuel Dunmininu Olugbade</h1>
-      <p class="title">Data Analyst</p>
-    </header>
+  <div class="container">
 
     <section class="projects">
 
@@ -183,16 +187,11 @@
           <p class="project-desc">
             Analyzed sustainable job opportunities and inflation resistance in Nigeria to recommend resilient skills for economic growth.
           </p>
-          <p class="project-tools">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Excel icon" title="Excel" />
-            <img src="https://cdn-icons-png.flaticon.com/512/3291/3291698.png" alt="SQL icon" title="SQL" />
-            <img src="https://cdn-icons-png.flaticon.com/512/888/888870.png" alt="Power BI icon" title="Power BI" />
-          </p>
         </div>
       </article>
 
       <article class="project-card">
-        <img class="project-image" src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="COVID-19 virus icon" />
+        <img class="project-image" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Virus icon" />
         <div class="project-content">
           <h3 class="project-title">
             <a href="https://github.com/Oluwafeyidunmininu/COVID-19-ANALYSIS-REVIEW" target="_blank" rel="noopener noreferrer">
@@ -201,9 +200,6 @@
           </h3>
           <p class="project-desc">
             Tracked key health indicators including infection rates and vaccination coverage to guide public health planning.
-          </p>
-          <p class="project-tools">
-            <img src="https://cdn-icons-png.flaticon.com/512/3291/3291698.png" alt="SQL icon" title="SQL" />
           </p>
         </div>
       </article>
@@ -219,15 +215,11 @@
           <p class="project-desc">
             Built dashboards to monitor HR KPIs and performance metrics for workforce optimization at Altera.
           </p>
-          <p class="project-tools">
-            <img src="https://cdn-icons-png.flaticon.com/512/888/888870.png" alt="Power BI icon" title="Power BI" />
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Excel icon" title="Excel" />
-          </p>
         </div>
       </article>
 
       <article class="project-card">
-        <img class="project-image" src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="Customer icon" />
+        <img class="project-image" src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Shopping cart icon" />
         <div class="project-content">
           <h3 class="project-title">
             <a href="https://github.com/Oluwafeyidunmininu/CUSTOMER-AND-ORDERS-PROJECT" target="_blank" rel="noopener noreferrer">
@@ -237,9 +229,6 @@
           <p class="project-desc">
             Used SQL to derive customer insights and sales analysis for KCC order data.
           </p>
-          <p class="project-tools">
-            <img src="https://cdn-icons-png.flaticon.com/512/3291/3291698.png" alt="SQL icon" title="SQL" />
-          </p>
         </div>
       </article>
 
@@ -248,7 +237,7 @@
 
   <footer>
     <p>
-      Contact me: <a href="mailto:dunmininue@gmail.com">dunmininue@gmail.com</a> | GitHub: <a href="https://github.com/Oluwafeyidunmininu" target="_blank" rel="noopener noreferrer">Oluwafeyidunmininu</a>
+      &copy; 2025 Emmanuel Dunmininu Olugbade
     </p>
   </footer>
 
