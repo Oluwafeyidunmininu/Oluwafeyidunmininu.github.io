@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EMMANUEL DUNMININU OLUGBADE | Data Analyst Portfolio</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap');
 
     * {
       box-sizing: border-box;
@@ -13,169 +13,200 @@
       padding: 0;
     }
     body {
-      font-family: 'Open Sans', Arial, sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
-      line-height: 1.6;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff9f7; /* soft pastel peach */
+      color: #263238; /* dark slate */
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-    }
-    nav {
-      background-color: #000;
-      padding: 2.5rem 1rem 1rem 1rem;
-      color: white;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-    nav h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 4rem;
-      font-weight: 900;
-      color: white;
-      letter-spacing: 2px;
-      margin-bottom: 0.3rem;
-    }
-    nav .subtitle {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #bbb;
-    }
-    .container {
-      max-width: 1100px;
-      margin: 2rem auto 4rem auto;
-      padding: 0 1rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .summary {
-      background: white;
-      padding: 1.5rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      font-size: 1.1rem;
-      color: #333;
       line-height: 1.5;
     }
-    .skills {
-      background: white;
-      padding: 1rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      font-weight: 600;
-      color: #1e90ff;
-      font-size: 1.2rem;
+    header {
+      background-color: #0077b6; /* vibrant blue */
+      color: #ffb703; /* bright warm yellow-orange */
+      padding: 2rem 1.5rem;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.5rem;
+      letter-spacing: 4px;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+    }
+    header p {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #ffe066; /* lighter warm yellow */
+      margin-top: 0;
+      letter-spacing: 1.5px;
+    }
+    .skills {
+      background-color: #ffb703; /* bright warm yellow-orange */
+      color: #023047; /* deep blue */
+      padding: 1rem 0;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 2rem;
+      user-select: none;
+      box-shadow: inset 0 -3px 10px rgba(0,0,0,0.1);
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2rem;
+      padding: 0 1rem;
+      flex-grow: 1;
+    }
+    /* Sidebar summary */
+    .sidebar {
+      background: #ffe066; /* soft pastel yellow */
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      font-size: 1rem;
+      color: #023047; /* deep blue */
+      line-height: 1.6;
+      font-weight: 600;
+    }
+    .sidebar h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #0077b6; /* vibrant blue */
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #023047;
+    }
+    /* Projects grid */
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+      gap: 1.8rem;
     }
     .project-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s ease;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 5px solid #ffb703; /* bright warm yellow-orange */
     }
     .project-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.18);
     }
     .project-image {
       width: 100%;
       height: 180px;
       object-fit: cover;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 3px solid #0077b6; /* vibrant blue */
     }
     .project-content {
-      padding: 1.2rem 1.5rem;
+      padding: 1.5rem 1.6rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
     .project-title {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #1e90ff;
+      color: #0077b6; /* vibrant blue */
+      margin-bottom: 0.6rem;
       text-decoration: none;
     }
     .project-title a {
       color: inherit;
       text-decoration: none;
+      transition: color 0.25s ease;
     }
     .project-title a:hover {
+      color: #ffb703; /* bright warm yellow-orange */
       text-decoration: underline;
     }
     .project-desc {
       font-size: 1rem;
-      color: #495057;
+      color: #4a4a4a;
       margin-bottom: 1rem;
       flex-grow: 1;
     }
     .project-tools {
       font-style: italic;
       font-size: 0.9rem;
-      color: #6c757d;
+      color: #757575;
       border-top: 1px solid #eee;
-      padding-top: 0.6rem;
+      padding-top: 0.5rem;
     }
     footer {
-      padding: 1.8rem 1rem;
+      background-color: #0077b6; /* vibrant blue */
+      color: #ffe066; /* soft yellow */
       text-align: center;
+      padding: 1.5rem 1rem;
       font-size: 0.9rem;
-      color: #6c757d;
-      border-top: 1px solid #dee2e6;
-      background-color: #f1f3f5;
       user-select: none;
+      margin-top: auto;
+      box-shadow: inset 0 3px 10px rgba(255, 183, 3, 0.4);
     }
     footer a {
-      color: #1e90ff;
-      font-weight: 600;
-      margin: 0 0.6rem;
+      color: #ffb703; /* bright warm yellow-orange */
+      font-weight: 700;
       text-decoration: none;
+      margin: 0 0.6rem;
+      transition: color 0.3s ease;
     }
     footer a:hover {
+      color: #ffe066;
       text-decoration: underline;
     }
-    @media (max-width: 480px) {
-      nav h1 {
-        font-size: 2.8rem;
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
       }
-      nav .subtitle {
-        font-size: 1.3rem;
+      .sidebar {
+        margin-bottom: 2rem;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+      header p {
+        font-size: 1rem;
       }
       .skills {
         font-size: 1rem;
-      }
-      .project-title {
-        font-size: 1.1rem;
+        padding: 0.7rem 0;
       }
     }
   </style>
 </head>
 <body>
-  <nav>
+  <header>
     <h1>EMMANUEL DUNMININU OLUGBADE</h1>
-    <div class="subtitle">Data Analyst</div>
-  </nav>
+    <p>Data Analyst</p>
+  </header>
 
-  <div class="container">
-    <section class="summary">
+  <div class="skills">
+    Skills: Excel | SQL | Power BI | Python | Data Visualization | Problem Solving
+  </div>
+
+  <main>
+    <aside class="sidebar">
+      <h2>Summary</h2>
       <p>
-        Data Analyst with a passion for transforming raw data into actionable insights. Skilled in Excel, SQL, Power BI, Python, and Data Visualization, with a strong focus on problem-solving and business intelligence. Experienced in analyzing complex datasets to drive decision-making and optimize business performance.
+        Experienced Data Analyst passionate about delivering clear insights from complex data. Proficient in Excel, SQL, Power BI, and Python, with a strong background in creating dashboards, performing deep data analysis, and driving data-driven decisions.
       </p>
-    </section>
-
-    <section class="skills">
-      Skills: Excel | SQL | Power BI | Python | Data Visualization | Problem Solving
-    </section>
+    </aside>
 
     <section class="projects">
       <article class="project-card">
@@ -238,7 +269,7 @@
         </div>
       </article>
     </section>
-  </div>
+  </main>
 
   <footer>
     <p>
