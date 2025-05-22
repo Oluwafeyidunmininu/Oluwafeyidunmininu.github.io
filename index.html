@@ -1,55 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Emmanuel Olugbade | Data Analyst Portfolio</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #333;
+      background-color: #f0f4f3;
+      color: #264653;
       line-height: 1.6;
     }
     header {
-      background-color: #005288;
+      background-color: #2a9d8f;
       color: #fff;
       padding: 2rem 1rem;
       text-align: center;
     }
     header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2.8rem;
+    }
+    header p {
       margin: 0;
-      font-size: 2.5rem;
+      font-weight: 600;
+      font-size: 1.2rem;
     }
-    .hero-image {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
+    .header-image {
+      max-width: 700px;
+      width: 90%;
       display: block;
-    }
-    .container {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: 1.5rem auto 3rem auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     .summary {
-      margin-bottom: 2rem;
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+      padding: 0 1rem;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #264653dd;
     }
     .project {
-      background: #f9f9f9;
-      padding: 1rem;
-      border-left: 5px solid #005288;
-      margin-bottom: 1.5rem;
+      max-width: 700px;
+      background: #ffffff;
+      padding: 1rem 1.5rem;
+      border-left: 5px solid #e76f51;
+      margin: 1rem auto;
       border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .project-thumbnail {
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      background-color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .project-thumbnail img, .project-thumbnail svg {
+      max-width: 36px;
+      max-height: 36px;
+    }
+    .project-content {
+      flex: 1;
     }
     .project h2 {
       margin-top: 0;
+      margin-bottom: 0.4rem;
     }
     .project a {
-      color: #005288;
+      color: #2a9d8f;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.25rem;
     }
     .project a:hover {
       text-decoration: underline;
@@ -57,8 +89,18 @@
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: #f4f4f4;
+      background: #e9ecef;
       border-top: 1px solid #ccc;
+      font-size: 0.9rem;
+      color: #264653cc;
+    }
+    footer a {
+      color: #2a9d8f;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -69,41 +111,99 @@
     <p>Data Analyst | Excel | SQL | Power BI | Python</p>
   </header>
 
-  <img class="hero-image" src="https://github.com/user-attachments/assets/6980c91c-0f7b-4da7-bd36-28d35ed3878a" alt="Main Sustainable Job">
+  <!-- Your image below the header -->
+  <img
+    src="https://github.com/user-attachments/assets/6980c91c-0f7b-4da7-bd36-28d35ed3878a"
+    alt="Sustainable Jobs & Skills Analysis"
+    class="header-image"
+  />
 
-  <div class="container">
-    <div class="summary">
-      <p>I am a data analyst with practical experience in Excel, SQL, Power BI, and Python. I specialize in transforming raw datasets into valuable insights that drive business decisions. With a strong foundation in data cleaning, analysis, visualization, and storytelling, I help organizations understand trends and make data-driven decisions.</p>
-    </div>
-
-    <section class="project">
-      <h2><a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank">Sustainable Jobs & Skills vs Inflation (2024)</a></h2>
-      <p>Analyzed sustainable job opportunities and inflation resistance in Nigeria to recommend resilient skills for economic growth.</p>
-    </section>
-
-    <section class="project">
-      <h2><a href="https://github.com/Oluwafeyidunmininu/COVID-19-ANALYSIS-REVIEW" target="_blank">COVID-19 Analysis Review</a></h2>
-      <p>Tracked key health indicators including infection rates and vaccination coverage to guide public health planning.</p>
-    </section>
-
-    <section class="project">
-      <h2><a href="https://github.com/Oluwafeyidunmininu/Altera-HR-Analysis" target="_blank">Altera HR Analysis</a></h2>
-      <p>Built dashboards to monitor HR KPIs and performance metrics for workforce optimization at Altera.</p>
-    </section>
-
-    <section class="project">
-      <h2><a href="https://github.com/Oluwafeyidunmininu/CUSTOMER-AND-ORDERS-PROJECT" target="_blank">Customer and Orders Project</a></h2>
-      <p>Used SQL to derive customer insights and sales analysis for KCC order data.</p>
-    </section>
-
-    <section class="project">
-      <h2><a href="https://github.com/Oluwafeyidunmininu/Retail-Purchases-Project" target="_blank">Retail Purchases Project</a></h2>
-      <p>Analyzed retail purchase data using Excel to understand customer buying trends.</p>
-    </section>
+  <div class="summary">
+    <p>
+      I am a data analyst with experience in Excel, SQL, Power BI, and Python. I specialize in transforming raw data into meaningful insights and creating interactive dashboards to support strategic decision-making. I am passionate about solving problems with data and delivering value through insightful analysis.
+    </p>
   </div>
 
+  <!-- Sustainable Jobs & Skills vs Inflation -->
+  <section class="project">
+    <div class="project-thumbnail" aria-label="Sustainable Jobs icon">
+      <img src="https://img.icons8.com/fluency/48/000000/worker-male.png" alt="Worker icon"/>
+    </div>
+    <div class="project-content">
+      <h2>
+        <a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank" rel="noopener noreferrer">
+          Sustainable Jobs & Skills vs Inflation (2024)
+        </a>
+      </h2>
+      <p>Analyzed sustainable job opportunities and inflation resistance in Nigeria to recommend resilient skills for economic growth.</p>
+    </div>
+  </section>
+
+  <!-- COVID-19 Analysis Review -->
+  <section class="project">
+    <div class="project-thumbnail" aria-label="COVID-19 icon">
+      <img src="https://img.icons8.com/fluency/48/000000/coronavirus.png" alt="Coronavirus icon"/>
+    </div>
+    <div class="project-content">
+      <h2>
+        <a href="https://github.com/Oluwafeyidunmininu/COVID-19-ANALYSIS-REVIEW" target="_blank" rel="noopener noreferrer">
+          COVID-19 Analysis Review
+        </a>
+      </h2>
+      <p>Tracked key health indicators including infection rates and vaccination coverage to guide public health planning.</p>
+    </div>
+  </section>
+
+  <!-- Altera HR Analysis -->
+  <section class="project">
+    <div class="project-thumbnail" aria-label="HR icon">
+      <img src="https://img.icons8.com/fluency/48/000000/hr-employee.png" alt="Human resources icon"/>
+    </div>
+    <div class="project-content">
+      <h2>
+        <a href="https://github.com/Oluwafeyidunmininu/Altera-HR-Analysis" target="_blank" rel="noopener noreferrer">
+          Altera HR Analysis
+        </a>
+      </h2>
+      <p>Built dashboards to monitor HR KPIs and performance metrics for workforce optimization at Altera.</p>
+    </div>
+  </section>
+
+  <!-- Customer and Orders Project -->
+  <section class="project">
+    <div class="project-thumbnail" aria-label="SQL icon">
+      <img src="https://img.icons8.com/color/48/000000/database.png" alt="Database icon"/>
+    </div>
+    <div class="project-content">
+      <h2>
+        <a href="https://github.com/Oluwafeyidunmininu/CUSTOMER-AND-ORDERS-PROJECT" target="_blank" rel="noopener noreferrer">
+          Customer and Orders Project
+        </a>
+      </h2>
+      <p>Used SQL to derive customer insights and sales analysis for KCC order data.</p>
+    </div>
+  </section>
+
+  <!-- Retail Purchases Project -->
+  <section class="project">
+    <div class="project-thumbnail" aria-label="Retail icon">
+      <img src="https://img.icons8.com/fluency/48/000000/shopping-cart.png" alt="Shopping cart icon"/>
+    </div>
+    <div class="project-content">
+      <h2>
+        <a href="https://github.com/Oluwafeyidunmininu/Retail-Purchases-Project" target="_blank" rel="noopener noreferrer">
+          Retail Purchases Project
+        </a>
+      </h2>
+      <p>Analyzed retail purchase data using Excel to understand customer buying trends.</p>
+    </div>
+  </section>
+
   <footer>
-    <p>Contact: <a href="mailto:dunmininue@gmail.com">dunmininue@gmail.com</a> | <a href="https://linkedin.com/in/emmanuel-olugbade-dunmininu" target="_blank">LinkedIn</a></p>
+    <p>
+      Contact: <a href="mailto:dunmininue@gmail.com">dunmininue@gmail.com</a> |
+      <a href="https://linkedin.com/in/emmanuel-olugbade-dunmininu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
   </footer>
 
 </body>
