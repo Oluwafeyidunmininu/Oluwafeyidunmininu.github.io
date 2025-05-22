@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EMMANUEL DUNMININU OLUGBADE | Data Analyst Portfolio</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap');
 
     * {
       box-sizing: border-box;
@@ -13,188 +13,156 @@
       padding: 0;
     }
     body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      line-height: 1.5;
-    }
-    header {
-      background-color: #000;
-      color: #e0e0e0;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 3.5rem;
-      letter-spacing: 3px;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-      color: #1e90ff;
-    }
-    header p {
-      font-weight: 600;
-      font-size: 1.3rem;
-      color: #7f8c8d;
-      margin-top: 0;
-    }
-    .skills {
-      background-color: #000;
-      color: #1e90ff;
-      padding: 1rem 0;
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      margin-bottom: 2rem;
-      user-select: none;
-    }
-    main {
-      max-width: 1200px;
-      margin: 0 auto 3rem auto;
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 2rem;
-      padding: 0 1rem;
-      flex-grow: 1;
-    }
-    /* Sidebar summary */
-    .sidebar {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      font-size: 1rem;
-      color: #212529;
+      font-family: 'Roboto', sans-serif;
+      background-color: #eaf4ea; /* very light green */
+      color: #2e3d2f; /* dark greenish text */
       line-height: 1.6;
     }
-    .sidebar h2 {
-      font-weight: 700;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #1e90ff;
-      padding-bottom: 0.5rem;
-      color: #1e90ff;
+    nav {
+      background-color: #1b3a2d; /* deep myth green */
+      padding: 2.5rem 1rem 1rem 1rem;
+      color: white;
+      text-align: center;
     }
-    /* Projects grid */
+    nav h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.8rem;
+      font-weight: 700;
+      color: #d1e7d1; /* soft pale green */
+      margin-bottom: 0.2rem;
+    }
+    nav .subtitle {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #a3c2a0; /* lighter green */
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .summary {
+      background-color: #d1e7d1;
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+      color: #1b3a2d;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-style: italic;
+    }
+    .skills {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      color: #2e5833; /* medium green */
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+    }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
     }
     .project-card {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(27, 58, 45, 0.15);
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.2s ease;
     }
     .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(27, 58, 45, 0.3);
     }
     .project-image {
       width: 100%;
-      height: 180px;
+      height: 160px;
       object-fit: cover;
-      border-bottom: 3px solid #1e90ff;
     }
     .project-content {
-      padding: 1.5rem 1.6rem;
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
     .project-title {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      color: #1e90ff;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
+      color: #1b3a2d;
       text-decoration: none;
     }
     .project-title a {
-      color: inherit;
+      color: #1b3a2d;
       text-decoration: none;
     }
     .project-title a:hover {
+      color: #4b7f4b; /* lighter green on hover */
       text-decoration: underline;
     }
     .project-desc {
-      font-size: 1rem;
-      color: #495057;
-      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #2e3d2f;
+      margin-bottom: 0.8rem;
       flex-grow: 1;
     }
     .project-tools {
-      font-style: italic;
       font-size: 0.9rem;
-      color: #6c757d;
-      border-top: 1px solid #eee;
-      padding-top: 0.5rem;
+      font-weight: 600;
+      color: #4b7f4b;
+      margin-top: auto;
+      text-align: right;
+      font-style: italic;
     }
     footer {
-      background-color: #000;
-      color: #6c757d;
+      margin-top: 3rem;
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 1.5rem 1rem;
       font-size: 0.9rem;
-      user-select: none;
-      margin-top: auto;
+      color: #6c757d;
+      border-top: 1px solid #b7d3b7;
+      background-color: #d1e7d1;
     }
     footer a {
-      color: #1e90ff;
+      color: #1b3a2d;
       font-weight: 600;
+      margin: 0 0.5rem;
       text-decoration: none;
-      margin: 0 0.6rem;
     }
     footer a:hover {
       text-decoration: underline;
     }
-    @media (max-width: 900px) {
-      main {
-        grid-template-columns: 1fr;
-      }
-      .sidebar {
-        margin-bottom: 2rem;
-      }
-    }
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 2.4rem;
+      nav h1 {
+        font-size: 2.8rem;
       }
-      header p {
-        font-size: 1rem;
+      nav .subtitle {
+        font-size: 1.3rem;
       }
       .skills {
         font-size: 1rem;
-        padding: 0.7rem 0;
       }
     }
   </style>
 </head>
 <body>
-  <header>
+  <nav>
     <h1>EMMANUEL DUNMININU OLUGBADE</h1>
-    <p>Data Analyst</p>
-  </header>
+    <div class="subtitle">Data Analyst</div>
+  </nav>
 
-  <div class="skills">
-    Skills: Excel | SQL | Power BI | Python | Data Visualization | Problem Solving
-  </div>
+  <div class="container">
+    <div class="summary">
+      Passionate Data Analyst with expertise in Excel, SQL, Power BI, Python, and data visualization. Skilled in solving complex problems and delivering actionable insights to drive business growth.
+    </div>
 
-  <main>
-    <aside class="sidebar">
-      <h2>Summary</h2>
-      <p>
-        Experienced Data Analyst passionate about delivering clear insights from complex data. Proficient in Excel, SQL, Power BI, and Python, with a strong background in creating dashboards, performing deep data analysis, and driving data-driven decisions.
-      </p>
-    </aside>
+    <div class="skills">
+      Skills: Excel | SQL | Power BI | Python | Data Visualization | Problem Solving
+    </div>
 
     <section class="projects">
       <article class="project-card">
@@ -208,7 +176,7 @@
           <p class="project-desc">
             Analyzed sustainable job opportunities and inflation resistance in Nigeria to recommend resilient skills for economic growth.
           </p>
-          <div class="project-tools">Tools: Excel, Power BI, Python</div>
+          <p class="project-tools">Tools: Excel, Python, Power BI</p>
         </div>
       </article>
 
@@ -223,7 +191,7 @@
           <p class="project-desc">
             Tracked key health indicators including infection rates and vaccination coverage to guide public health planning.
           </p>
-          <div class="project-tools">Tools: SQL, Python, Power BI</div>
+          <p class="project-tools">Tools: SQL, Python</p>
         </div>
       </article>
 
@@ -236,9 +204,9 @@
             </a>
           </h3>
           <p class="project-desc">
-            Derived customer insights and sales analysis for KCC order data using SQL.
+            Used SQL to derive customer insights and sales analysis for KCC order data.
           </p>
-          <div class="project-tools">Tools: SQL, Excel</div>
+          <p class="project-tools">Tools: SQL, Excel</p>
         </div>
       </article>
 
@@ -253,19 +221,18 @@
           <p class="project-desc">
             Built dashboards to monitor HR KPIs and performance metrics for workforce optimization at Altera.
           </p>
-          <div class="project-tools">Tools: Power BI, Excel</div>
+          <p class="project-tools">Tools: Power BI, Excel</p>
         </div>
       </article>
     </section>
-  </main>
+  </div>
 
   <footer>
     <p>
       Contact me: <a href="mailto:dunmininue@gmail.com">dunmininue@gmail.com</a> |
       <a href="https://linkedin.com/in/emmanuel-olugbade-dunmininu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </p>
-    <p>&copy; 2025 Emmanuel Dunmininu Olugbade</p>
+    <p>&copy; 2025</p>
   </footer>
 </body>
 </html>
-
