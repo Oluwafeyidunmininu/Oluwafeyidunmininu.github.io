@@ -9,41 +9,71 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f0f4f8;
+      background: #e6f4ea; /* soft green background */
       color: #333;
       line-height: 1.6;
     }
     header {
-      background: linear-gradient(135deg, #1e3a8a, #1e40af); /* deeper blue shades */
+      background: linear-gradient(135deg, #065f46, #10b981); /* green gradient */
       color: white;
-      padding: 2rem 1rem;
+      padding: 2rem;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       text-align: left;
-      box-shadow: 0 4px 15px rgba(30, 58, 138, 0.5);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     header img {
-      width: 130px;
-      height: 130px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      margin-right: 2rem;
-      border: 3px solid #fff;
+      border: 4px solid #fff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-    .header-content {
-      max-width: 600px;
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
-    .title {
-      font-size: 2.2rem;
+    .header-title {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-title .title {
+      font-size: 2.5rem;
       font-weight: 700;
+      margin: 0;
+      white-space: nowrap;
     }
-    .summary {
-      margin: 1.5rem auto;
+    .header-title p {
+      margin: 0.2rem 0 0;
       font-size: 1.1rem;
-      max-width: 800px;
-      text-align: center;
+    }
+    .bio-summary {
+      max-width: 400px;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-left: 2rem;
+    }
+    .contact {
+      margin-top: 1rem;
+    }
+    .contact a {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #d1fae5;
+      border: 2px solid #6ee7b7;
+      color: #065f46;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .contact a:hover {
+      background: #6ee7b7;
+      color: white;
     }
     .container {
       max-width: 1000px;
@@ -119,55 +149,45 @@
       background: #cbd5e1;
       color: #334155;
     }
-    .contact {
-      margin-top: 1.2rem;
-    }
-    .contact a {
-      display: inline-block;
-      margin: 0.4rem 0.6rem 0 0;
-      padding: 0.6rem 1.2rem;
-      background: #f0f9ff;
-      border: 2px solid #bae6fd;
-      color: #0f172a;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: all 0.3s;
-    }
-    .contact a:hover {
-      background: #bae6fd;
-      border-color: #7dd3fc;
-      color: #0369a1;
-    }
     .github-button {
       display: block;
       width: fit-content;
       margin: 2rem auto;
       padding: 0.9rem 1.8rem;
-      background-color: #1e3a8a;
+      background-color: #065f46;
       color: white;
       text-decoration: none;
       border-radius: 10px;
       font-weight: 600;
       font-size: 1rem;
       text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
+      transition: background-color 0.3s;
     }
     .github-button:hover {
-      background-color: #3b82f6;
-      color: #fff;
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+      background-color: #10b981;
     }
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: #1e3a8a;
+      background: #065f46;
       color: white;
       font-size: 0.9rem;
     }
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .header-left {
+        flex-direction: column;
+        align-items: center;
+      }
+      .bio-summary {
+        margin-left: 0;
+        margin-top: 1rem;
+        text-align: center;
+      }
       .project {
         flex-direction: column;
         align-items: center;
@@ -176,39 +196,28 @@
         width: 100%;
         height: auto;
       }
-      .project-content {
-        width: 100%;
-      }
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      header img {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-      .header-content {
-        max-width: 100%;
-      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://avatars.githubusercontent.com/u/182537964?v=4" alt="Emmanuel Olugbade" />
-    <div class="header-content">
-      <div class="title">EMMANUEL DUNMININU OLUGBADE</div>
-      <p>Data Analyst</p>
-      <div class="contact">
-        <a href="mailto:emmanuel.olugbade@example.com">📧 Email</a>
-        <a href="https://linkedin.com/in/emmanuelolugbade" target="_blank">🔗 LinkedIn</a>
+    <div class="header-left">
+      <img src="https://avatars.githubusercontent.com/u/182537964?v=4" alt="Emmanuel Olugbade" />
+      <div class="header-title">
+        <div class="title">Emmanuel Dunmininu Olugbade</div>
+        <p>Data Analyst</p>
+        <div class="contact">
+          <a href="mailto:emmanuel.olugbade@example.com">📧 Email</a>
+          <a href="https://linkedin.com/in/emmanuelolugbade" target="_blank">🔗 LinkedIn</a>
+        </div>
       </div>
     </div>
-  </header>
-  <main class="container">
-    <div class="summary">
+    <div class="bio-summary">
       Passionate Data Analyst with expertise in Excel, SQL, Power BI, Python, and data visualization. Skilled in solving complex problems and delivering actionable insights to drive business growth.
     </div>
+  </header>
+
+  <main class="container">
     <section class="section skills">
       <h2>Skills</h2>
       <span>Excel</span>
@@ -219,55 +228,52 @@
       <span>Problem Solving</span>
       <span>Storytelling</span>
     </section>
+
     <section class="section">
       <h2>Projects</h2>
+
       <div class="project">
-        <img src="https://github.com/user-attachments/assets/6980c91c-0f7b-4da7-bd36-28d35ed3878a"/>
+        <img src="https://github.com/user-attachments/assets/6980c91c-0f7b-4da7-bd36-28d35ed3878a" alt="Sustainable Jobs Analysis"/>
         <div class="project-content">
-          <h3><a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank">Data Analysis On The Sustainable Jobs And Skills Against Inflation In Nigeria (2024)</a></h3>
-          <p>This project analyzes the most sustainable and inflation-resistant jobs and skills in Nigeria amid rising inflation rates. Using data from official sources like the NBS and World Bank, the project cleans and integrates datasets with Excel and SQL, and visualizes insights with Power BI. It identifies high-paying, high-growth careers—such as Data Scientist and Cyber-Security Specialist—and recommends strategic skill development for economic resilience.</p>
+          <h3><a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank">Data Analysis On Sustainable Jobs in Nigeria (2024)</a></h3>
+          <p>Analysis of the most sustainable and inflation-resistant jobs and skills in Nigeria. Data cleaning with Excel & SQL, visualization with Power BI.</p>
           <div class="skills">
-            <span>Excel</span>
-            <span>SQL</span>
-            <span>Power BI</span>
+            <span>Excel</span><span>SQL</span><span>Power BI</span>
           </div>
         </div>
       </div>
+
       <div class="project">
-        <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=400&q=80" alt="COVID-19 Global Impact dashboard" />
+        <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=400&q=80" alt="COVID-19 Dashboard" />
         <div class="project-content">
           <h3><a href="https://github.com/Oluwafeyidunmininu/COVID-19-Global-Impact-Analysis" target="_blank">COVID-19 Global Impact Analysis</a></h3>
-          <p>This project presents a comprehensive 2019 global impact analysis of the COVID-19 pandemic. It focuses on key indicators such as infection rates, death counts, vaccination rates, and the percentage of population vaccinated.</p>
-          <div class="skills">
-            <span>SQL</span>
-          </div>
+          <p>Analysis of global COVID-19 trends: infections, deaths, and vaccination coverage using SQL.</p>
+          <div class="skills"><span>SQL</span></div>
         </div>
       </div>
+
       <div class="project">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="People Analytics Dashboard" />
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Altera HR Analysis" />
         <div class="project-content">
           <h3><a href="https://github.com/Oluwafeyidunmininu/Altera-HR-Analysis" target="_blank">Altera HR Analysis</a></h3>
-          <p>This project presents an HR Analytics Dashboard designed to provide clear, actionable insights into the workforce of Altera. It serves as a decision-support tool highlighting key HR metrics and performance indicators to improve talent management and organizational planning.</p>
-          <div class="skills">
-            <span>Power BI</span>
-            <span>Excel</span>
-          </div>
+          <p>HR Dashboard highlighting key workforce metrics to improve talent management and planning.</p>
+          <div class="skills"><span>Excel</span><span>Power BI</span></div>
         </div>
       </div>
+
       <div class="project">
-        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=400&q=80" alt="Retail sales data dashboard" />
+        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=400&q=80" alt="Retail Dashboard" />
         <div class="project-content">
           <h3><a href="https://github.com/Oluwafeyidunmininu/Retail-Purchases-Project" target="_blank">Retail Purchases Project</a></h3>
-          <p>Exploratory and visual analysis of retail purchasing trends and behavior over time.</p>
-          <div class="skills">
-            <span>Excel</span>
-            <span>Power BI</span>
-          </div>
+          <p>Exploratory and visual analysis of retail purchasing trends and consumer behavior over time.</p>
+          <div class="skills"><span>Excel</span><span>Power BI</span></div>
         </div>
       </div>
     </section>
-    <a class="github-button" href="https://github.com/Oluwafeyidunmininu" target="_blank">🚀 View My GitHub</a>
+
+    <a class="github-button" href="https://github.com/Oluwafeyidunmininu" target="_blank">🌐 View My GitHub</a>
   </main>
+
   <footer>
     &copy; 2025 Emmanuel Dunmininu Olugbade
   </footer>
