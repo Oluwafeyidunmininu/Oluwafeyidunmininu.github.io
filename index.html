@@ -79,7 +79,7 @@
       align-items: flex-start;
       gap: 1.5rem;
       transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-      cursor: pointer;
+      cursor: default;
     }
     .project:hover {
       background-color: #e0f2fe;
@@ -191,6 +191,18 @@
         max-width: 100%;
       }
     }
+    .read-more-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #0ea5e9;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .read-more-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -225,82 +237,48 @@
     <section class="section">
       <h2>Projects</h2>
 
-      <!-- Project 1 with Read More -->
-      <div class="project" onclick="toggleReadMore(this)">
-        <img src="https://github.com/user-attachments/assets/6980c91c-0f7b-4da7-bd36-28d35ed3878a" />
+      <!-- Project 1 with Read More link to separate page -->
+      <div class="project">
+        <img src="https://github.com/user-attachments/assets/6980c91c-0f7b-4da7-bd36-28d35ed3878a" alt="Sustainable Jobs Project" />
         <div class="project-content">
-          <h3><a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank">Data Analysis On The Sustainable Jobs And Skills Against Inflation In Nigeria (2024)</a></h3>
-          <p>This project analyzes the most sustainable and inflation-resistant jobs and skills in Nigeria amid rising inflation rates.</p>
+          <h3>
+            <a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank">
+              Data Analysis On The Sustainable Jobs And Skills Against Inflation In Nigeria (2024)
+            </a>
+          </h3>
+          <p>This project analyzes inflation-resistant jobs and skills in Nigeria using Excel, SQL, and Power BI.</p>
           <div class="skills">
             <span>Excel</span>
             <span>SQL</span>
             <span>Power BI</span>
           </div>
-          <div class="read-more" style="display: none; margin-top: 1rem;">
-            <p><strong>Abstract:</strong> The study explores resilient career paths during economic downturns and recommends strategic skill development. Insights are drawn from labor market trends, wage inflation, and digital transformation in key industries.</p>
-            <img src="https://user-images.githubusercontent.com/your-dashboard-image-url.png" alt="Dashboard Preview" style="width: 100%; max-width: 500px; border-radius: 8px; margin: 1rem 0;">
-            <p><a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank" style="color: #1e3a8a; font-weight: 600;">🔗 View Project on GitHub</a></p>
-          </div>
-          <button style="margin-top: 0.5rem; background: none; border: none; color: #0ea5e9; font-weight: bold; cursor: pointer; padding: 0;">📖 Read More</button>
+          <a href="project-details.html" class="read-more-link" target="_blank">Read More &raquo;</a>
         </div>
       </div>
 
-      <!-- Other Projects (Unchanged) -->
+      <!-- Example of another project -->
       <div class="project">
-        <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=400&q=80" alt="COVID-19 Global Impact dashboard" />
+        <img src="https://via.placeholder.com/280x180.png?text=Project+2" alt="Project 2" />
         <div class="project-content">
-          <h3><a href="https://github.com/Oluwafeyidunmininu/COVID-19-Global-Impact-Analysis" target="_blank">COVID-19 Global Impact Analysis</a></h3>
-          <p>This project presents a comprehensive 2019 global impact analysis of the COVID-19 pandemic.</p>
+          <h3>
+            <a href="https://github.com/anotherproject" target="_blank">Market Basket Analysis in Retail Sector</a>
+          </h3>
+          <p>Analyzed purchasing patterns and improved product placement for retail stores using Python and Tableau.</p>
           <div class="skills">
-            <span>SQL</span>
+            <span>Python</span>
+            <span>Tableau</span>
+            <span>Data Mining</span>
           </div>
+          <!-- No Read More link for this demo -->
         </div>
       </div>
 
-      <div class="project">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="People Analytics Dashboard" />
-        <div class="project-content">
-          <h3><a href="https://github.com/Oluwafeyidunmininu/Altera-HR-Analysis" target="_blank">Altera HR Analysis</a></h3>
-          <p>This project presents an HR Analytics Dashboard with key performance metrics to improve talent management and planning.</p>
-          <div class="skills">
-            <span>Power BI</span>
-            <span>Excel</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project">
-        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=400&q=80" alt="Retail sales data dashboard" />
-        <div class="project-content">
-          <h3><a href="https://github.com/Oluwafeyidunmininu/Retail-Purchases-Project" target="_blank">Retail Purchases Project</a></h3>
-          <p>Exploratory and visual analysis of retail purchasing trends and behavior over time.</p>
-          <div class="skills">
-            <span>Excel</span>
-            <span>Power BI</span>
-          </div>
-        </div>
-      </div>
+      <!-- Add more projects similarly -->
     </section>
-
-    <a class="github-button" href="https://github.com/Oluwafeyidunmininu" target="_blank">🚀 View My GitHub</a>
   </main>
 
   <footer>
-    &copy; 2025 Emmanuel Dunmininu Olugbade
+    &copy; 2025 Emmanuel Olugbade — All rights reserved.
   </footer>
-
-  <script>
-    function toggleReadMore(projectCard) {
-      const readMore = projectCard.querySelector('.read-more');
-      const button = projectCard.querySelector('button');
-      if (readMore.style.display === 'none') {
-        readMore.style.display = 'block';
-        button.textContent = '🔽 Read Less';
-      } else {
-        readMore.style.display = 'none';
-        button.textContent = '📖 Read More';
-      }
-    }
-  </script>
 </body>
 </html>
