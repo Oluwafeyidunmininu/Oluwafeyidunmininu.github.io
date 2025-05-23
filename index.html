@@ -2,48 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emmanuel Olugbade | Data Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f0f4f8;
+      background: #e6f4ea; /* soft green background */
       color: #333;
       line-height: 1.6;
     }
     header {
-      background: linear-gradient(135deg, #1e3a8a, #1e40af);
+      background: linear-gradient(135deg, #065f46, #10b981); /* green gradient */
       color: white;
-      padding: 2rem 1rem;
+      padding: 2rem;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       text-align: left;
-      box-shadow: 0 4px 15px rgba(30, 58, 138, 0.5);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     header img {
-      width: 130px;
-      height: 130px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      margin-right: 2rem;
-      border: 3px solid #fff;
+      border: 4px solid #fff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-    .header-content {
-      max-width: 600px;
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
-    .title {
-      font-size: 2.2rem;
+    .header-title {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-title .title {
+      font-size: 2.5rem;
       font-weight: 700;
+      margin: 0;
+      white-space: nowrap;
     }
-    .summary {
-      margin: 1.5rem auto;
+    .header-title p {
+      margin: 0.2rem 0 0;
       font-size: 1.1rem;
-      max-width: 800px;
-      text-align: center;
+    }
+    .bio-summary {
+      max-width: 400px;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-left: 2rem;
+    }
+    .contact {
+      margin-top: 1rem;
+    }
+    .contact a {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #d1fae5;
+      border: 2px solid #6ee7b7;
+      color: #065f46;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .contact a:hover {
+      background: #6ee7b7;
+      color: white;
     }
     .container {
       max-width: 1000px;
@@ -79,6 +109,7 @@
       align-items: flex-start;
       gap: 1.5rem;
       transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      cursor: pointer;
     }
     .project:hover {
       background-color: #e0f2fe;
@@ -118,34 +149,45 @@
       background: #cbd5e1;
       color: #334155;
     }
-    .contact {
-      margin-top: 1.2rem;
-    }
-    .contact a {
-      display: inline-block;
-      margin: 0.4rem 0.6rem 0 0;
-      padding: 0.6rem 1.2rem;
-      background: #f0f9ff;
-      border: 2px solid #bae6fd;
-      color: #0f172a;
+    .github-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      padding: 0.9rem 1.8rem;
+      background-color: #065f46;
+      color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 10px;
       font-weight: 600;
-      transition: all 0.3s;
+      font-size: 1rem;
+      text-align: center;
+      transition: background-color 0.3s;
     }
-    .contact a:hover {
-      background: #bae6fd;
-      border-color: #7dd3fc;
-      color: #0369a1;
+    .github-button:hover {
+      background-color: #10b981;
     }
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: #1e3a8a;
+      background: #065f46;
       color: white;
       font-size: 0.9rem;
     }
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .header-left {
+        flex-direction: column;
+        align-items: center;
+      }
+      .bio-summary {
+        margin-left: 0;
+        margin-top: 1rem;
+        text-align: center;
+      }
       .project {
         flex-direction: column;
         align-items: center;
@@ -154,61 +196,28 @@
         width: 100%;
         height: auto;
       }
-      .project-content {
-        width: 100%;
-      }
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      header img {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-      .header-content {
-        max-width: 100%;
-      }
-    }
-    .read-more-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      color: #0ea5e9;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 1rem;
-      user-select: none;
-    }
-    .read-more-link:hover {
-      text-decoration: underline;
-    }
-    .full-abstract {
-      margin-top: 0.8rem;
-      font-size: 0.95rem;
-      color: #334155;
-      display: none;
-      white-space: pre-wrap;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://avatars.githubusercontent.com/u/182537964?v=4" alt="Emmanuel Olugbade" />
-    <div class="header-content">
-      <div class="title">EMMANUEL DUNMININU OLUGBADE</div>
-      <p>Data Analyst</p>
-      <div class="contact">
-        <a href="mailto:emmanuel.olugbade@example.com">📧 Email</a>
-        <a href="https://linkedin.com/in/emmanuelolugbade" target="_blank">🔗 LinkedIn</a>
+    <div class="header-left">
+      <img src="https://avatars.githubusercontent.com/u/182537964?v=4" alt="Emmanuel Olugbade" />
+      <div class="header-title">
+        <div class="title">Emmanuel Dunmininu Olugbade</div>
+        <p>Data Analyst</p>
+        <div class="contact">
+          <a href="mailto:emmanuel.olugbade@example.com">📧 Email</a>
+          <a href="https://linkedin.com/in/emmanuelolugbade" target="_blank">🔗 LinkedIn</a>
+        </div>
       </div>
+    </div>
+    <div class="bio-summary">
+      Passionate Data Analyst with expertise in Excel, SQL, Power BI, Python, and data visualization. Skilled in solving complex problems and delivering actionable insights to drive business growth.
     </div>
   </header>
 
   <main class="container">
-    <div class="summary">
-      Passionate Data Analyst with expertise in Excel, SQL, Power BI, Python, and data visualization. Skilled in solving complex problems and delivering actionable insights to drive business growth.
-    </div>
-
     <section class="section skills">
       <h2>Skills</h2>
       <span>Excel</span>
@@ -223,67 +232,106 @@
     <section class="section">
       <h2>Projects</h2>
 
-      <!-- FIRST PROJECT WITH "Read More" toggle for full abstract -->
       <div class="project">
-        <img src="https://github.com/user-attachments/assets/6980c91c-0f7b-4da7-bd36-28d35ed3878a" alt="Sustainable Jobs Project" />
+        <img src="https://github.com/user-attachments/assets/6980c91c-0f7b-4da7-bd36-28d35ed3878a" alt="Sustainable Jobs Analysis"/>
         <div class="project-content">
-          <h3>
-            <a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank" rel="noopener noreferrer">
-              Data Analysis On The Sustainable Jobs And Skills Against Inflation In Nigeria (2024)
-            </a>
-          </h3>
-          <p>This project analyzes inflation-resistant jobs and skills in Nigeria using Excel, SQL, and Power BI.</p>
+          <h3><a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank">Data Analysis On Sustainable Jobs in Nigeria (2024)</a></h3>
+          <p>"Abstract
+Introduction
+
+This analysis investigates sustainable jobs and skills resistant to inflation in Nigeria (2024) amid rising inflation rates hitting 29.90% in January 2024. The increasing inflation underscores the urgent need to identify jobs that can withstand economic pressures while offering stability.
+
+The study aims to identify jobs with strong inflation resistance, growth potential, and competitive salaries that can provide Nigerians with a stable standard of living.
+Data Collection
+
+Data was sourced from authoritative Nigerian economic and labor market reports, saved into three Excel sheets detailing jobs, skills, and inflation resistance metrics.
+Data Cleaning
+
+Data cleaning was performed using Excel to prepare the raw datasets for further analysis. The main steps included:
+
+    Removing Duplicates and Handling Missing Values: The datasets were checked for duplicate records, missing entries, and blank cells. Corrections were made by deleting duplicates and filling or addressing missing data to ensure accuracy.
+
+    Correcting Data Types: Each column’s data type was verified and adjusted to the appropriate format (e.g., numeric, text) to avoid errors during analysis.
+
+    Dropping Unnecessary Columns: The “S/N” (serial number) column was removed since it did not contribute to the analysis.
+
+    Renaming Columns: The header “Importance (1-5)” was renamed to “Ratings” for clarity.
+
+    Reorganizing Columns: Job titles and inflation resistance rates were properly placed into separate columns to facilitate easier querying and visualization.
+
+    Finalizing Cleaned Whole: After these steps, the cleaned whole were saved separately and then prepared for integration using SQL.
+
+Table Joining
+
+SQL was used to merge the cleaned tables into a single dataset for analysis.
+Data Visualization
+
+Power BI visualized key insights, including average ratings and job titles, facilitating clear presentation of the data.
+
+![image](https://github.com/user-attachments/assets/d8645cee-a08c-49bb-9259-1025d5074b63)
+Key Findings
+
+    Inflation Resistance: Cyber-Security Specialist, Data Scientist, Medical Specialist, and Software Developer rank highest.
+    ![image](https://github.com/user-attachments/assets/f01f976f-7e77-41de-bca1-507d969b671b)
+
+    Growth Rate: Renewable Energy Engineer, Cyber-Security Specialist, and Data Scientist show rapid growth, with Renewable Energy Engineer offering a higher salary but lower inflation resistance.
+    ![image](https://github.com/user-attachments/assets/f7debe2e-8817-4206-92eb-cedae402b645)
+
+    Average Salary: Software Developer, Medical Specialist, and Data Scientist are the highest earners among the top jobs.
+   ![image](https://github.com/user-attachments/assets/f4e7e5eb-e34a-47d6-a4d7-25e15c3b4354)
+
+    Job Ratings: Medical Specialist received the highest skill rating (5/5).
+    ![image](https://github.com/user-attachments/assets/4a16e201-c2a6-4cf1-b85f-6adc77b1bdc5)
+
+Conclusion
+
+Inflation significantly impacts job sustainability in Nigeria. Specialized skills in inflation-resistant jobs are crucial for maintaining a good living standard.
+Recommendations
+
+    Focus on acquiring skills tied to inflation-resistant jobs.
+
+    Organize awareness and skills development programs.
+
+    Support policy frameworks encouraging skill acquisition.".</p>
           <div class="skills">
-            <span>Excel</span>
-            <span>SQL</span>
-            <span>Power BI</span>
-          </div>
-          <a href="#" class="read-more-link" id="toggleAbstract">Read More &raquo;</a>
-          <div class="full-abstract" id="fullAbstract">
-            In this project, we analyze which jobs and skills can withstand inflationary pressures in Nigeria as of 2024. Using a combination of Excel for data cleaning, SQL for querying labor market datasets, and Power BI for interactive visualization dashboards, we identify sectors and skill sets resilient to inflation. The goal is to provide actionable insights to job seekers and policymakers to focus on sustainable employment opportunities.
+            <span>Excel</span><span>SQL</span><span>Power BI</span>
           </div>
         </div>
       </div>
 
-      <!-- Example of another project -->
       <div class="project">
-        <img src="https://via.placeholder.com/280x180.png?text=Project+2" alt="Project 2" />
+        <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=400&q=80" alt="COVID-19 Dashboard" />
         <div class="project-content">
-          <h3>
-            <a href="https://github.com/anotherproject" target="_blank" rel="noopener noreferrer">Market Basket Analysis in Retail Sector</a>
-          </h3>
-          <p>Analyzed purchasing patterns and improved product placement for retail stores using Python and Tableau.</p>
-          <div class="skills">
-            <span>Python</span>
-            <span>Tableau</span>
-            <span>Data Mining</span>
-          </div>
+          <h3><a href="https://github.com/Oluwafeyidunmininu/COVID-19-Global-Impact-Analysis" target="_blank">COVID-19 Global Impact Analysis</a></h3>
+          <p>Analysis of global COVID-19 trends: infections, deaths, and vaccination coverage using SQL.</p>
+          <div class="skills"><span>SQL</span></div>
         </div>
       </div>
 
-      <!-- Add more projects similarly -->
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Altera HR Analysis" />
+        <div class="project-content">
+          <h3><a href="https://github.com/Oluwafeyidunmininu/Altera-HR-Analysis" target="_blank">Altera HR Analysis</a></h3>
+          <p>HR Dashboard highlighting key workforce metrics to improve talent management and planning.</p>
+          <div class="skills"><span>Excel</span><span>Power BI</span></div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=400&q=80" alt="Retail Dashboard" />
+        <div class="project-content">
+          <h3><a href="https://github.com/Oluwafeyidunmininu/Retail-Purchases-Project" target="_blank">Retail Purchases Project</a></h3>
+          <p>Exploratory and visual analysis of retail purchasing trends and consumer behavior over time.</p>
+          <div class="skills"><span>Excel</span><span>Power BI</span></div>
+        </div>
+      </div>
     </section>
+
+    <a class="github-button" href="https://github.com/Oluwafeyidunmininu" target="_blank">🌐 View My GitHub</a>
   </main>
 
   <footer>
-    &copy; 2025 Emmanuel Olugbade — All rights reserved.
+    &copy; 2025 Emmanuel Dunmininu Olugbade
   </footer>
-
-  <script>
-    // Toggle full abstract visibility on clicking "Read More"
-    const toggleLink = document.getElementById('toggleAbstract');
-    const fullAbstract = document.getElementById('fullAbstract');
-
-    toggleLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (fullAbstract.style.display === 'block') {
-        fullAbstract.style.display = 'none';
-        toggleLink.textContent = 'Read More »';
-      } else {
-        fullAbstract.style.display = 'block';
-        toggleLink.textContent = 'Show Less «';
-      }
-    });
-  </script>
 </body>
 </html>
