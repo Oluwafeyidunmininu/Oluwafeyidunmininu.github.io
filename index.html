@@ -3,178 +3,139 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Emmanuel Olugbade | Data Analyst Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+<title>Emmanuel Olugbade | Portfolio</title>
 <style>
+  * {
+    box-sizing: border-box;
+  }
   body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: #e6f4f1;
-    color: #1a202c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    margin: 0; padding: 0;
+    color: #222;
   }
   header {
-    background-color: #2c7a7b;
+    background: #0284c7;
     color: white;
     text-align: center;
-    padding: 3rem 1rem 2rem;
+    padding: 2rem 1rem;
   }
   header img {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     border: 3px solid white;
     object-fit: cover;
     margin-bottom: 1rem;
   }
   header h1 {
-    margin: 0.3rem 0 0;
+    margin: 0;
     font-weight: 700;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
   header p {
-    margin: 0.4rem 0 1rem;
+    margin: 0.2rem 0 1rem;
     font-weight: 500;
-    font-size: 1.25rem;
-    letter-spacing: 1px;
-  }
-  .contact-links {
-    margin-bottom: 1.5rem;
-  }
-  .contact-links a {
-    color: #bee3db;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: 600;
-    border: 2px solid transparent;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-  }
-  .contact-links a:hover {
-    background: #bee3db;
-    color: #2c7a7b;
-    border-color: #2c7a7b;
+    font-size: 1.2rem;
   }
   main {
     max-width: 900px;
-    margin: 0 auto 4rem;
+    margin: 2rem auto 3rem;
     padding: 0 1rem;
   }
-  section {
-    margin-bottom: 3rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #2c7a7b;
-    border-bottom: 3px solid #38b2ac;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1.5rem;
-  }
-  .bio {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    line-height: 1.6;
-    color: #334e52;
-  }
-  .skills-list {
+  .skills {
     text-align: center;
+    margin-bottom: 2rem;
   }
-  .skills-list span {
+  .skills span {
     display: inline-block;
-    background: #81e6d9;
-    color: #234e52;
-    padding: 0.5rem 1.2rem;
+    background: #bfdbfe;
+    color: #1e40af;
+    padding: 0.4rem 1rem;
     margin: 0.3rem 0.5rem;
-    border-radius: 30px;
+    border-radius: 20px;
     font-weight: 600;
-    font-size: 1rem;
   }
   .projects {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
   .project-card {
     background: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(44, 122, 123, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
-  }
-  .project-card:hover {
-    box-shadow: 0 12px 30px rgba(44, 122, 123, 0.4);
+    display: flex;
+    flex-direction: column;
   }
   .project-image {
     width: 100%;
-    height: 180px;
+    height: 140px;
     object-fit: cover;
+    border-bottom: 1px solid #ddd;
   }
   .project-content {
-    padding: 1.25rem 1.5rem;
+    padding: 1rem 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
-  .project-content h3 {
-    margin: 0 0 0.6rem;
+  .project-title {
     font-weight: 700;
-    font-size: 1.3rem;
-    color: #276749;
+    font-size: 1.2rem;
+    color: #0369a1;
+    margin: 0 0 0.5rem 0;
   }
-  .project-content h3 a {
-    color: #276749;
+  .project-title a {
     text-decoration: none;
+    color: inherit;
   }
-  .project-content h3 a:hover {
+  .project-title a:hover {
     text-decoration: underline;
   }
-  .project-description {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #4a5568;
-    margin-bottom: 0.8rem;
-  }
   .project-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    margin-top: auto;
   }
   .project-skills span {
-    background: #bee3db;
-    color: #234e52;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 0.3rem 0.7rem;
+    margin: 0.2rem 0.3rem 0.2rem 0;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .read-more-btn {
+    background: transparent;
+    border: none;
+    color: #0284c7;
+    cursor: pointer;
+    margin-top: 0.75rem;
     font-weight: 600;
     font-size: 0.9rem;
+    align-self: flex-start;
+    padding: 0;
   }
-  .github-link {
+  .project-description {
+    display: none;
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+  }
+  .project-description.show {
     display: block;
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 200px;
-    background: #2c7a7b;
-    color: white;
-    font-weight: 700;
-    padding: 0.75rem 1.5rem;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-  .github-link:hover {
-    background: #38b2ac;
   }
   footer {
     text-align: center;
-    padding: 2rem 1rem;
-    font-size: 0.9rem;
-    color: #234e52;
-    border-top: 1px solid #bee3db;
+    color: #555;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #ddd;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 450px) {
     header h1 {
-      font-size: 2rem;
-    }
-    .project-content h3 {
-      font-size: 1.1rem;
+      font-size: 1.8rem;
     }
   }
 </style>
@@ -185,89 +146,106 @@
   <img src="https://avatars.githubusercontent.com/u/182537964?v=4" alt="Emmanuel Olugbade" />
   <h1>Emmanuel Dunmininu Olugbade</h1>
   <p>Data Analyst</p>
-  <div class="contact-links">
-    <a href="mailto:emmanuel.olugbade@example.com">📧 Email</a>
-    <a href="https://linkedin.com/in/emmanuelolugbade" target="_blank" rel="noopener">🔗 LinkedIn</a>
-  </div>
 </header>
 
 <main>
-  <section>
-    <div class="bio">
-      Passionate Data Analyst with expertise in Excel, SQL, Power BI, Python, and data visualization. Skilled in solving complex problems and delivering actionable insights to drive business growth.
-    </div>
+  <section class="skills" aria-label="Skills">
+    <span>Excel</span>
+    <span>SQL</span>
+    <span>Power BI</span>
+    <span>Python</span>
+    <span>Data Visualization</span>
+    <span>Problem Solving</span>
+    <span>Storytelling</span>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <span>Excel</span>
-      <span>SQL</span>
-      <span>Power BI</span>
-      <span>Python</span>
-      <span>Data Visualization</span>
-      <span>Problem Solving</span>
-      <span>Storytelling</span>
-    </div>
+  <section class="projects" aria-label="Projects">
+    <article class="project-card">
+      <img src="https://raw.githubusercontent.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-/main/images/dashboard.png" alt="Sustainable Jobs Dashboard" class="project-image" />
+      <div class="project-content">
+        <h3 class="project-title">
+          <a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank" rel="noopener noreferrer">Sustainable Jobs & Skills Against Inflation (2024)</a>
+        </h3>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+        <p class="project-description">
+          Investigates sustainable jobs and skills resilient to inflation in Nigeria, aiming to identify high-growth, competitive salary careers for financial stability.
+        </p>
+        <div class="project-skills">
+          <span>Excel</span><span>SQL</span><span>Power BI</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=400&q=80" alt="COVID-19 Data Visualization" class="project-image" />
+      <div class="project-content">
+        <h3 class="project-title">
+          <a href="https://github.com/Oluwafeyidunmininu/COVID-19-Global-Impact-Analysis" target="_blank" rel="noopener noreferrer">COVID-19 Global Impact Analysis</a>
+        </h3>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+        <p class="project-description">
+          Analyzes the COVID-19 pandemic’s global impact, focusing on infection, death, and vaccination rates across countries and continents.
+        </p>
+        <div class="project-skills">
+          <span>SQL</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="HR Dashboard" class="project-image" />
+      <div class="project-content">
+        <h3 class="project-title">
+          <a href="https://github.com/Oluwafeyidunmininu/Altera-HR-Analysis" target="_blank" rel="noopener noreferrer">Altera HR Analysis</a>
+        </h3>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+        <p class="project-description">
+          Simple HR analytics dashboard delivering clear insights to improve workforce decision-making at Altera Corporation.
+        </p>
+        <div class="project-skills">
+          <span>Excel</span><span>Power BI</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=400&q=80" alt="Retail Purchases Visualization" class="project-image" />
+      <div class="project-content">
+        <h3 class="project-title">
+          <a href="https://github.com/Oluwafeyidunmininu/Retail-Purchases-Project" target="_blank" rel="noopener noreferrer">Retail Purchases Project</a>
+        </h3>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+        <p class="project-description">
+          Exploratory visual analysis of retail purchasing trends and consumer behaviors over time.
+        </p>
+        <div class="project-skills">
+          <span>Excel</span><span>Power BI</span>
+        </div>
+      </div>
+    </article>
   </section>
-
-  <section>
-    <h2>Projects</h2>
-    <div class="projects">
-
-      <article class="project-card">
-        <img class="project-image" src="https://raw.githubusercontent.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-/main/images/dashboard.png" alt="Sustainable Jobs Analysis" />
-        <div class="project-content">
-          <h3><a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank" rel="noopener">Data Analysis On Sustainable Jobs and Skills Against Inflation in Nigeria (2024)</a></h3>
-          <p class="project-description">This analysis investigates sustainable jobs and skills resistant to inflation in Nigeria (2024) amid rising inflation rates hitting 29.90% in January 2024. The study aims to identify jobs with strong inflation resistance, growth potential, and competitive salaries that can provide Nigerians with a stable standard of living.</p>
-          <div class="project-skills">
-            <span>Excel</span><span>SQL</span><span>Power BI</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <img class="project-image" src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=400&q=80" alt="COVID-19 Dashboard" />
-        <div class="project-content">
-          <h3><a href="https://github.com/Oluwafeyidunmininu/COVID-19-Global-Impact-Analysis" target="_blank" rel="noopener">COVID-19 Global Impact Analysis</a></h3>
-          <p class="project-description">This project presents a comprehensive global analysis of the COVID-19 pandemic’s impact in 2019, focusing on key indicators such as infection rates, death counts, vaccination rates, and percentage of population vaccinated. The analysis aims to identify countries and continents with disproportionately high infection and death rates relative to population size, explore the relationship between population and vaccination coverage, and reveal disparities in vaccine distribution.</p>
-          <div class="project-skills">
-            <span>SQL</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <img class="project-image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Altera HR Analysis" />
-        <div class="project-content">
-          <h3><a href="https://github.com/Oluwafeyidunmininu/Altera-HR-Analysis" target="_blank" rel="noopener">Altera HR Analysis</a></h3>
-          <p class="project-description">This project presents the development of a Simple HR Analytics Dashboard designed to support decision-making by providing clear insights into the workforce of Altera Corporation.</p>
-          <div class="project-skills">
-            <span>Excel</span><span>Power BI</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <img class="project-image" src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=400&q=80" alt="Retail Dashboard" />
-        <div class="project-content">
-          <h3><a href="https://github.com/Oluwafeyidunmininu/Retail-Purchases-Project" target="_blank" rel="noopener">Retail Purchases Project</a></h3>
-          <p class="project-description">Exploratory and visual analysis of retail purchasing trends and consumer behavior over time.</p>
-          <div class="project-skills">
-            <span>Excel</span><span>Power BI</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <a class="github-link" href="https://github.com/Oluwafeyidunmininu" target="_blank" rel="noopener">🌐 View My GitHub</a>
 </main>
 
 <footer>
   &copy; 2025 Emmanuel Dunmininu Olugbade
 </footer>
+
+<script>
+  document.querySelectorAll('.read-more-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const desc = button.nextElementSibling;
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+      if (desc.classList.contains('show')) {
+        desc.classList.remove('show');
+        button.textContent = 'Read More';
+      } else {
+        desc.classList.add('show');
+        button.textContent = 'Read Less';
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
