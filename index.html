@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Emmanuel Olugbade | Data Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -79,7 +79,6 @@
       align-items: flex-start;
       gap: 1.5rem;
       transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-      cursor: default;
     }
     .project:hover {
       background-color: #e0f2fe;
@@ -139,27 +138,6 @@
       border-color: #7dd3fc;
       color: #0369a1;
     }
-    .github-button {
-      display: block;
-      width: fit-content;
-      margin: 2rem auto;
-      padding: 0.9rem 1.8rem;
-      background-color: #1e3a8a;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    .github-button:hover {
-      background-color: #3b82f6;
-      color: #fff;
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
-    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -199,9 +177,17 @@
       cursor: pointer;
       text-decoration: none;
       font-size: 1rem;
+      user-select: none;
     }
     .read-more-link:hover {
       text-decoration: underline;
+    }
+    .full-abstract {
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+      color: #334155;
+      display: none;
+      white-space: pre-wrap;
     }
   </style>
 </head>
@@ -237,12 +223,12 @@
     <section class="section">
       <h2>Projects</h2>
 
-      <!-- Project 1 with Read More link to separate page -->
+      <!-- FIRST PROJECT WITH "Read More" toggle for full abstract -->
       <div class="project">
         <img src="https://github.com/user-attachments/assets/6980c91c-0f7b-4da7-bd36-28d35ed3878a" alt="Sustainable Jobs Project" />
         <div class="project-content">
           <h3>
-            <a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank">
+            <a href="https://github.com/Oluwafeyidunmininu/DATA-ANALYSIS--ON-THE-SUSTAINABLE-JOBS-AND-SKILLS-AGAINST-INFLATION-IN-NIGERIA-2024-" target="_blank" rel="noopener noreferrer">
               Data Analysis On The Sustainable Jobs And Skills Against Inflation In Nigeria (2024)
             </a>
           </h3>
@@ -252,7 +238,10 @@
             <span>SQL</span>
             <span>Power BI</span>
           </div>
-          <a href="project-details.html" class="read-more-link" target="_blank">Read More &raquo;</a>
+          <a href="#" class="read-more-link" id="toggleAbstract">Read More &raquo;</a>
+          <div class="full-abstract" id="fullAbstract">
+            In this project, we analyze which jobs and skills can withstand inflationary pressures in Nigeria as of 2024. Using a combination of Excel for data cleaning, SQL for querying labor market datasets, and Power BI for interactive visualization dashboards, we identify sectors and skill sets resilient to inflation. The goal is to provide actionable insights to job seekers and policymakers to focus on sustainable employment opportunities.
+          </div>
         </div>
       </div>
 
@@ -261,7 +250,7 @@
         <img src="https://via.placeholder.com/280x180.png?text=Project+2" alt="Project 2" />
         <div class="project-content">
           <h3>
-            <a href="https://github.com/anotherproject" target="_blank">Market Basket Analysis in Retail Sector</a>
+            <a href="https://github.com/anotherproject" target="_blank" rel="noopener noreferrer">Market Basket Analysis in Retail Sector</a>
           </h3>
           <p>Analyzed purchasing patterns and improved product placement for retail stores using Python and Tableau.</p>
           <div class="skills">
@@ -269,7 +258,6 @@
             <span>Tableau</span>
             <span>Data Mining</span>
           </div>
-          <!-- No Read More link for this demo -->
         </div>
       </div>
 
@@ -280,5 +268,22 @@
   <footer>
     &copy; 2025 Emmanuel Olugbade — All rights reserved.
   </footer>
+
+  <script>
+    // Toggle full abstract visibility on clicking "Read More"
+    const toggleLink = document.getElementById('toggleAbstract');
+    const fullAbstract = document.getElementById('fullAbstract');
+
+    toggleLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (fullAbstract.style.display === 'block') {
+        fullAbstract.style.display = 'none';
+        toggleLink.textContent = 'Read More »';
+      } else {
+        fullAbstract.style.display = 'block';
+        toggleLink.textContent = 'Show Less «';
+      }
+    });
+  </script>
 </body>
 </html>
